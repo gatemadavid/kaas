@@ -36,6 +36,13 @@ class User():
         self.loggedIn = False
         return None
 
+    def editComment(self, comment):
+        if self.isLoggedIn is True:
+            author = comment.author
+            if self.username == author.username:
+                return true
+            return {"Message": "You cannot edit this comment. You are not the owner."}
+
 class Moderator(User):
     """ moderator class, inherits from user, adds abiliity to delete any comment """
     def __init__(self):
