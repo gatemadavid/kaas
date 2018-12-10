@@ -12,3 +12,12 @@ class User():
 class Moderator(User):
     def delete_comment(self):
         return True
+
+class Admin(Moderator):
+    """ admin class, inherits from Moderator, adds abiliity to edit any comment """
+    def __init__(self):
+        super(Moderator, self).__init__()
+
+    def editComment(self):
+        if isLoggedIn = True:
+            return True
