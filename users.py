@@ -8,3 +8,7 @@ class User():
         self.username = username
         self.lastLoggedInAt = lastLoggedIn
 
+
+class Moderator(User):
+    def delete_comment(self):
+        return True
