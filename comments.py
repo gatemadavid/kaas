@@ -35,7 +35,7 @@ class Comment(object):
             return {"Message": "You cannot edit this comment. You are not the owner."}
 
 
-class Reply(Comment):
+class Reply():
     """
     Reply class used to create a reply isinstance
 
