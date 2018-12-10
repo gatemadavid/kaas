@@ -22,3 +22,12 @@ class Comment(object):
         self.message = message
         self.author = author
         self.timestamp = datetime.datetime.now()
+
+def editComment(self, author, comment_id, message):
+    author = self.author
+    if loggedinUser == author:
+        for comment in comments:
+            if comment['id'] == comment_id:
+                comment['message'] = message
+    else:
+        return {"Message": "You cannot edit this comment. You are not the owner."}
