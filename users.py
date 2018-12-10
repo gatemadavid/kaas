@@ -24,13 +24,25 @@ class User():
         self.lastLoggedInAt = datetime.datetime.today().strftime('%Y/%m/%d - %I:%M%p')
         return None
 
+    def logOut(self):
+        """
+        Method signs out a user by setting loggedIn property to false
+
+        Returns
+        -------
+        None
+        """
+
+        self.loggedIn = False
+        return None
+
 class Moderator(User):
     """ moderator class, inherits from user, adds abiliity to delete any comment """
     def __init__(self):
         super(User, self).__init__()
 
     def delete_comment(self):
-        if isLoggedIn = True:
+        if self.isLoggedIn is True:
             return True
 
 class Admin(Moderator):
@@ -39,5 +51,5 @@ class Admin(Moderator):
         super(Moderator, self).__init__()
 
     def editComment(self):
-        if isLoggedIn = True:
+        if self.isLoggedIn is True:
             return True
